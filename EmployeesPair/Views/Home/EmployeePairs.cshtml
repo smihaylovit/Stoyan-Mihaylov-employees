@@ -1,0 +1,24 @@
+﻿@using EmployeesPair.Models
+@model List<EmployeePair>
+
+<table class="table">
+    <thead>
+        <tr class="row">
+            <th>Employee ID # 1</th>
+            <th>Employee ID # 2</th>
+            <th>Project ID</th>
+            <th>Days Worked</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="row">
+                <td>@item.FirstEmployeeId</td>
+                <td>@item.SecondEmployeeId</td>
+                <td>@item.ProjectId</td>
+                <td>@item.DaysWorkedTogether</td>
+            </tr>
+        }
+    </tbody>
+</table>

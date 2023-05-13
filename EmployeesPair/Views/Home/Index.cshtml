@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Employees Pair Projects";
+}
+
+<h2>Pair of employees who have worked together</h2>
+<h4>
+    Create an application that identifies the pair of employees who have worked together on common projects for the longest period of time.
+</h4>
+<div class="row">
+    <div class="col-lg-12">
+        @using (Html.BeginForm("UploadFile", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <br />
+            @Html.TextBox("file", null, new { type = "file", accept = ".csv" })
+            <br />
+            @Html.TextBox("submit", "Upload File", new { type = "submit", @class = "btn btn-default"})
+        }
+    </div>
+</div>
